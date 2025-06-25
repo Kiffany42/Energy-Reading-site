@@ -1,0 +1,22 @@
+import React from "react"; import HTMLFlipBook from "react-pageflip";
+
+export default function ShineBrightBook() { const pages = [ { text: "Once upon a time, in a sky full of stars, one tiny light named Luma was born. She shimmered softly and wondered, 'Why am I here?'", image: "/page1.png" }, { text: "The other stars twinkled in patterns, each with their own sparkle. But Luma felt different. 'I don't shine like them,' she whispered sadly.", image: "/page2.png" }, { text: "She tried to copy the stars around her—wiggling, spinning, glowing bright. But no matter how hard she tried, her light didn’t feel right.", image: "/page3.png" }, { text: "Then, a warm voice echoed from deep within her heart: 'You were never meant to copy. You were made to shine your way.'", image: "/page4.png" }, { text: "Luma blinked. 'Shine my way? But what if no one likes it?' The voice whispered, 'Your light is a gift. When you shine true, you help others shine too.'", image: "/page5.png" }, { text: "So Luma stopped copying. She floated still and listened. She felt a soft glow rise from inside—warm, wild, and golden.", image: "/page6.png" }, { text: "Suddenly, her glow sparkled in colors never seen before—like rainbows made of courage and dreams.", image: "/page7.png" }, { text: "The other stars noticed. They paused... and smiled. 'Wow,' they said, 'we’ve never seen a light like yours!'", image: "/page8.png" }, { text: "One by one, the stars began to shine in new ways too. Together, they lit up the sky like a symphony of souls.", image: "/page9.png" }, { text: "Luma giggled and glowed, no longer trying—just being. Her heart felt full. She knew now: she was meant to shine her truth.", image: "/page10.png" }, { text: "And from that night on, whenever a child looked up at the stars, Luma’s light whispered to them, 'Shine bright, little star. The world needs your true light.'", image: "/page11.png" }, { text: "Affirmations:\n- I am a light in this world.\n- I shine my own way.\n- My heart knows the way.\n- I don’t have to fit in to belong.\n- Being me is magical.", image: "/affirmations.png" }, { text: "Coloring Activity:\nColor Luma’s light your own way!", image: "/coloring.png" }, { text: "Creative Activity:\nDraw a picture of how you shine your light in the world.", image: "/drawyourlight.png" }, { text: "About the Author:\nKiffany Lightard is a passionate storyteller, mother, and spiritual guide whose mission is to help children and adults reconnect with their inner light.\n'"Shine Bright, Little Star" is her debut children’s book—created from the heart—to remind every child that who they are is already enough.'", image: "/author.png" } ];
+
+return ( <main className="min-h-screen bg-gradient-to-br from-yellow-100 via-pink-50 to-purple-100 flex flex-col items-center justify-center p-4"> <h1 className="text-4xl font-bold text-orange-600 mb-6 text-center drop-shadow-sm"> Shine Bright, Little Star </h1>
+
+<HTMLFlipBook width={350} height={500} className="shadow-2xl rounded-xl">
+    {pages.map((page, index) => (
+      <div key={index} className="bg-white p-4 text-center flex flex-col justify-between">
+        <img src={page.image} alt={`Page ${index + 1}`} className="rounded-xl w-full h-auto mb-4" />
+        <p className="text-gray-800 text-base whitespace-pre-line">{page.text}</p>
+      </div>
+    ))}
+  </HTMLFlipBook>
+
+  <footer className="mt-8 text-sm text-gray-500 text-center">
+    © 2025 Kiffany Lightard. All rights reserved.
+  </footer>
+</main>
+
+); }
+
